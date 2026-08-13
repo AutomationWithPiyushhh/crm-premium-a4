@@ -15,20 +15,20 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import generic_utility.FileUtility;
+import generic_utility.JavaUtility;
+
 public class CreateOrgTest {
 	public static void main(String[] args) throws InterruptedException, IOException, ParseException {
 
-		FileReader fr = new FileReader("./src/test/resources/commondata.json");
-
-		JSONParser parser = new JSONParser();
-		Object obj = parser.parse(fr);
+//		get the data json	
+		String browser = FileUtility.getDataFromJSONFile("bro");
+		String url = FileUtility.getDataFromJSONFile("url");
+		String username = FileUtility.getDataFromJSONFile("un");
+		String password = FileUtility.getDataFromJSONFile("pwd");
 		
-		JSONObject jObj = (JSONObject) obj;
-		String browser = jObj.get("bro").toString();
-		String url = jObj.get("url").toString();
-		String username = jObj.get("un").toString();
-		String password = jObj.get("pwd").toString();
-
+//		get data from excel
+		String orgName = FileUtility.getDataFromEXCELFile("org", 6, 0) + JavaUtility.generateRandomNumber();
 		
 //		open browser
 		WebDriver driver = null;
@@ -64,7 +64,7 @@ public class CreateOrgTest {
 
 //		fill the form
 //		String orgName = "automationwithpiyush" + System.currentTimeMillis();
-		String orgName = "automationwithpiyush" + (int)(Math.random()*999);
+//		String orgName = "automationwithpiyush" + (int)(Math.random()*999);
 		WebElement orgField = driver.findElement(By.name("accountname"));
 
 		orgField.sendKeys(orgName);

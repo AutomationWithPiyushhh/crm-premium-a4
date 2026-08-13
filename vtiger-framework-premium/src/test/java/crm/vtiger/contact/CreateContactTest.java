@@ -1,18 +1,9 @@
 package crm.vtiger.contact;
 
-import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Set;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -21,37 +12,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
+
+import generic_utility.FileUtility;
+import generic_utility.WebDriverUtility;
 
 public class CreateContactTest {
 	public static void main(String[] args) throws InterruptedException, IOException, ParseException {
 
-//		get the data json
-		FileReader fr = new FileReader("./src/test/resources/commondata.json");
-
-		JSONParser parser = new JSONParser();
-		Object obj = parser.parse(fr);
-
-		JSONObject jObj = (JSONObject) obj;
-		String browser = jObj.get("bro").toString();
-		String url = jObj.get("url").toString();
-		String username = jObj.get("un").toString();
-		String password = jObj.get("pwd").toString();		
-		
+//		get the data json	
+		String browser = FileUtility.getDataFromJSONFile("bro");
+		String url = FileUtility.getDataFromJSONFile("url");
+		String username = FileUtility.getDataFromJSONFile("un");
+		String password = FileUtility.getDataFromJSONFile("pwd");
 		
 //		get data from excel
-		FileInputStream fis = new FileInputStream("./src/test/resources/testScriptData.xlsx");
-		Workbook wb = WorkbookFactory.create(fis);
-
-		Sheet sh1 = wb.getSheet("contact");
-		Row row1 = sh1.getRow(3);
-		Cell cell1 = row1.getCell(0);
-		String lastName = cell1.getStringCellValue();
-		
-		Sheet sh2 = wb.getSheet("org");
-		Row row2 = sh2.getRow(6);
-		Cell cell2 = row2.getCell(0);
-		String orgName = cell2.getStringCellValue();
+		String lastName = FileUtility.getDataFromEXCELFile("contact", 3, 0);
+		String orgName = FileUtility.getDataFromEXCELFile("org", 6, 0);
 		
 //		open browser
 		WebDriver driver = null;
@@ -112,7 +88,7 @@ public class CreateContactTest {
 		driver.findElement(By.id("search_txt")).sendKeys(orgName + Keys.ENTER);
 
 		Thread.sleep(2000);
-		driver.findElement(By.linkText(orgName)).click();
+		driver.findElement(By.partialLinkText(orgName)).click();
 
 //		step 7> come back to home
 		driver.switchTo().window(PID);
@@ -137,9 +113,12 @@ public class CreateContactTest {
 		WebElement profile = driver.findElement(By.cssSelector("img[src='themes/softed/images/user.PNG']"));
 
 //		hover on profile icon
-		Actions act = new Actions(driver);
-		act.moveToElement(profile).build().perform();
+//		Actions act = new Actions(driver);
+//		act.moveToElement(profile).build().perform();
 
+		WebDriverUtility wdUtil = new WebDriverUtility(driver);
+		wdUtil.hover(profile);
+		
 //		click on sign out link
 		driver.findElement(By.linkText("Sign Out")).click();
 
