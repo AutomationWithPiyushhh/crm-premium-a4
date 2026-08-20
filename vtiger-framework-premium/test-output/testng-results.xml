@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[========== CREATE CONTACT TEST STARTED ==========]]>
+    </line>
+    <line>
+      <![CDATA[Reading test data from JSON file...]]>
+    </line>
+    <line>
+      <![CDATA[Browser: chrome]]>
+    </line>
+    <line>
+      <![CDATA[URL: http://49.249.29.4:8888/]]>
+    </line>
+    <line>
+      <![CDATA[Username fetched successfully]]>
+    </line>
+    <line>
+      <![CDATA[Reading test data from Excel file...]]>
+    </line>
+    <line>
+      <![CDATA[Last Name: sharma]]>
+    </line>
+    <line>
+      <![CDATA[Organization Name: google]]>
+    </line>
+    <line>
+      <![CDATA[Launching browser...]]>
+    </line>
+    <line>
+      <![CDATA[Chrome browser launched]]>
+    </line>
+    <line>
+      <![CDATA[Browser maximized]]>
+    </line>
+    <line>
+      <![CDATA[Implicit wait configured for 15 seconds]]>
+    </line>
+    <line>
+      <![CDATA[Navigating to application URL...]]>
+    </line>
+    <line>
+      <![CDATA[Entering username...]]>
+    </line>
+    <line>
+      <![CDATA[Entering password...]]>
+    </line>
+    <line>
+      <![CDATA[Clicking Login button...]]>
+    </line>
+    <line>
+      <![CDATA[Login completed successfully]]>
+    </line>
+    <line>
+      <![CDATA[Navigating to Contacts module...]]>
+    </line>
+    <line>
+      <![CDATA[Clicking Create Contact button...]]>
+    </line>
+    <line>
+      <![CDATA[Create Contact page opened]]>
+    </line>
+    <line>
+      <![CDATA[Entering Last Name...]]>
+    </line>
+    <line>
+      <![CDATA[Last Name entered successfully]]>
+    </line>
+    <line>
+      <![CDATA[Capturing parent window ID...]]>
+    </line>
+    <line>
+      <![CDATA[Parent window ID captured]]>
+    </line>
+    <line>
+      <![CDATA[Opening Organization lookup window...]]>
+    </line>
+    <line>
+      <![CDATA[Fetching all window handles...]]>
+    </line>
+    <line>
+      <![CDATA[Total windows available: 2]]>
+    </line>
+    <line>
+      <![CDATA[Searching for Accounts window...]]>
+    </line>
+    <line>
+      <![CDATA[Current window URL: http://49.249.29.4:8888/index.php?module=Contacts&action=EditView&return_action=DetailView&parenttab=Marketing]]>
+    </line>
+    <line>
+      <![CDATA[Current window URL: http://49.249.29.4:8888/index.php?module=Accounts&action=Popup&popuptype=specific_contact_account_address&form=TasksEditView&form_submit=false&fromlink=&recordid=]]>
+    </line>
+    <line>
+      <![CDATA[Accounts window found]]>
+    </line>
+    <line>
+      <![CDATA[Searching Organization: google]]>
+    </line>
+    <line>
+      <![CDATA[Organization search completed]]>
+    </line>
+    <line>
+      <![CDATA[Organization selected successfully]]>
+    </line>
+    <line>
+      <![CDATA[Switching back to parent window...]]>
+    </line>
+    <line>
+      <![CDATA[Returned to Contact creation page]]>
+    </line>
+    <line>
+      <![CDATA[Entering Birthday...]]>
+    </line>
+    <line>
+      <![CDATA[Birthday entered successfully]]>
+    </line>
+    <line>
+      <![CDATA[Saving Contact...]]>
+    </line>
+    <line>
+      <![CDATA[Contact saved successfully]]>
+    </line>
+    <line>
+      <![CDATA[Starting Contact verification...]]>
+    </line>
+    <line>
+      <![CDATA[Expected Last Name: sharma]]>
+    </line>
+    <line>
+      <![CDATA[Actual Last Name: sharma]]>
+    </line>
+    <line>
+      <![CDATA[Expected Organization Name: google]]>
+    </line>
+    <line>
+      <![CDATA[Actual Organization Name: google_974]]>
+    </line>
+    <line>
+      <![CDATA[Preparing to logout...]]>
+    </line>
+    <line>
+      <![CDATA[Hovering over profile icon...]]>
+    </line>
+    <line>
+      <![CDATA[Clicking Sign Out...]]>
+    </line>
+    <line>
+      <![CDATA[Logout completed successfully]]>
+    </line>
+    <line>
+      <![CDATA[Closing browser...]]>
+    </line>
+    <line>
+      <![CDATA[========== CREATE CONTACT TEST COMPLETED ==========]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2026-08-20T12:51:49 IST" name="Default suite" finished-at="2026-08-20T12:52:09 IST" duration-ms="20024">
+    <groups>
+    </groups>
+    <test started-at="2026-08-20T12:51:49 IST" name="Default test" finished-at="2026-08-20T12:52:09 IST" duration-ms="20024">
+      <class name="crm.vtiger.contact.ContactTest">
+        <test-method signature="createContactTest()[pri:0, instance:crm.vtiger.contact.ContactTest@36ebc363]" started-at="2026-08-20T12:51:49 IST" name="createContactTest" finished-at="2026-08-20T12:52:09 IST" duration-ms="19974" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[========== CREATE CONTACT TEST STARTED ==========]]>
+            </line>
+            <line>
+              <![CDATA[Reading test data from JSON file...]]>
+            </line>
+            <line>
+              <![CDATA[Browser: chrome]]>
+            </line>
+            <line>
+              <![CDATA[URL: http://49.249.29.4:8888/]]>
+            </line>
+            <line>
+              <![CDATA[Username fetched successfully]]>
+            </line>
+            <line>
+              <![CDATA[Reading test data from Excel file...]]>
+            </line>
+            <line>
+              <![CDATA[Last Name: sharma]]>
+            </line>
+            <line>
+              <![CDATA[Organization Name: google]]>
+            </line>
+            <line>
+              <![CDATA[Launching browser...]]>
+            </line>
+            <line>
+              <![CDATA[Chrome browser launched]]>
+            </line>
+            <line>
+              <![CDATA[Browser maximized]]>
+            </line>
+            <line>
+              <![CDATA[Implicit wait configured for 15 seconds]]>
+            </line>
+            <line>
+              <![CDATA[Navigating to application URL...]]>
+            </line>
+            <line>
+              <![CDATA[Entering username...]]>
+            </line>
+            <line>
+              <![CDATA[Entering password...]]>
+            </line>
+            <line>
+              <![CDATA[Clicking Login button...]]>
+            </line>
+            <line>
+              <![CDATA[Login completed successfully]]>
+            </line>
+            <line>
+              <![CDATA[Navigating to Contacts module...]]>
+            </line>
+            <line>
+              <![CDATA[Clicking Create Contact button...]]>
+            </line>
+            <line>
+              <![CDATA[Create Contact page opened]]>
+            </line>
+            <line>
+              <![CDATA[Entering Last Name...]]>
+            </line>
+            <line>
+              <![CDATA[Last Name entered successfully]]>
+            </line>
+            <line>
+              <![CDATA[Capturing parent window ID...]]>
+            </line>
+            <line>
+              <![CDATA[Parent window ID captured]]>
+            </line>
+            <line>
+              <![CDATA[Opening Organization lookup window...]]>
+            </line>
+            <line>
+              <![CDATA[Fetching all window handles...]]>
+            </line>
+            <line>
+              <![CDATA[Total windows available: 2]]>
+            </line>
+            <line>
+              <![CDATA[Searching for Accounts window...]]>
+            </line>
+            <line>
+              <![CDATA[Current window URL: http://49.249.29.4:8888/index.php?module=Contacts&action=EditView&return_action=DetailView&parenttab=Marketing]]>
+            </line>
+            <line>
+              <![CDATA[Current window URL: http://49.249.29.4:8888/index.php?module=Accounts&action=Popup&popuptype=specific_contact_account_address&form=TasksEditView&form_submit=false&fromlink=&recordid=]]>
+            </line>
+            <line>
+              <![CDATA[Accounts window found]]>
+            </line>
+            <line>
+              <![CDATA[Searching Organization: google]]>
+            </line>
+            <line>
+              <![CDATA[Organization search completed]]>
+            </line>
+            <line>
+              <![CDATA[Organization selected successfully]]>
+            </line>
+            <line>
+              <![CDATA[Switching back to parent window...]]>
+            </line>
+            <line>
+              <![CDATA[Returned to Contact creation page]]>
+            </line>
+            <line>
+              <![CDATA[Entering Birthday...]]>
+            </line>
+            <line>
+              <![CDATA[Birthday entered successfully]]>
+            </line>
+            <line>
+              <![CDATA[Saving Contact...]]>
+            </line>
+            <line>
+              <![CDATA[Contact saved successfully]]>
+            </line>
+            <line>
+              <![CDATA[Starting Contact verification...]]>
+            </line>
+            <line>
+              <![CDATA[Expected Last Name: sharma]]>
+            </line>
+            <line>
+              <![CDATA[Actual Last Name: sharma]]>
+            </line>
+            <line>
+              <![CDATA[Expected Organization Name: google]]>
+            </line>
+            <line>
+              <![CDATA[Actual Organization Name: google_974]]>
+            </line>
+            <line>
+              <![CDATA[Preparing to logout...]]>
+            </line>
+            <line>
+              <![CDATA[Hovering over profile icon...]]>
+            </line>
+            <line>
+              <![CDATA[Clicking Sign Out...]]>
+            </line>
+            <line>
+              <![CDATA[Logout completed successfully]]>
+            </line>
+            <line>
+              <![CDATA[Closing browser...]]>
+            </line>
+            <line>
+              <![CDATA[========== CREATE CONTACT TEST COMPLETED ==========]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createContactTest -->
+      </class> <!-- crm.vtiger.contact.ContactTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
