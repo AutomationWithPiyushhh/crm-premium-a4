@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+
+
+<suite parallel="tests" name="Suite">
+	<test name="TestRunner1">
+		<classes>
+			<class name="types_of_executions.ContactTest" />
+		</classes>
+	</test>
+	
+	<test name="TestRunner2">
+		<classes>
+			<class name="types_of_executions.LeadTest" />
+		</classes>
+	</test>
+	
+	<test name="TestRunner3">
+		<classes>
+			<class name="types_of_executions.OrgTest" />
+		</classes>
+	</test>
+</suite>

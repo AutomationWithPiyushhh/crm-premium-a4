@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="crm.vtiger.contact.ContactTest">
+      <class name="helper_attributes.SkipIgnoredTest">
         <methods>
-          <include name="createContactTest"/>
+          <include name="modifyOrgTest"/>
+          <include name="createOrgTest"/>
         </methods>
-      </class> <!-- crm.vtiger.contact.ContactTest -->
+      </class> <!-- helper_attributes.SkipIgnoredTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

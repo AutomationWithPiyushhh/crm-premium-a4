@@ -1,12 +1,9 @@
-package crm.vtiger.organization;
+package crm.vtiger.opp;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
 
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import org.junit.experimental.theories.suppliers.TestedOn;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,24 +11,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
-import generic_utility.FileUtility;
-import generic_utility.JavaUtility;
+public class OppTest {
+	
+	@Test
+	public void createOppTest() throws InterruptedException {
 
-public class CreateOrgTest {
-	public static void main(String[] args) throws InterruptedException, IOException, ParseException {
-
-//		get the data json	
-		String browser = FileUtility.getDataFromJSONFile("bro");
-		String url = FileUtility.getDataFromJSONFile("url");
-		String username = FileUtility.getDataFromJSONFile("un");
-		String password = FileUtility.getDataFromJSONFile("pwd");
-		
-//		get data from excel
-		String orgName = FileUtility.getDataFromEXCELFile("org", 6, 0) + JavaUtility.generateRandomNumber();
-		
 //		open browser
 		WebDriver driver = null;
+
+		String browser = "chrome";
 
 		if (browser.equals("chrome")) {
 			driver = new ChromeDriver();
@@ -47,13 +37,13 @@ public class CreateOrgTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
 //		login	
-		driver.get(url);
+		driver.get("http://localhost:8888");
 
 		WebElement un = driver.findElement(By.name("user_name"));
-		un.sendKeys(username);
+		un.sendKeys("admin");
 
 		WebElement pwd = driver.findElement(By.name("user_password"));
-		pwd.sendKeys(password);
+		pwd.sendKeys("password");
 
 		WebElement loginButton = driver.findElement(By.id("submitButton"));
 		loginButton.click();
@@ -63,8 +53,7 @@ public class CreateOrgTest {
 		driver.findElement(By.cssSelector("img[title='Create Organization...']")).click();
 
 //		fill the form
-//		String orgName = "automationwithpiyush" + System.currentTimeMillis();
-//		String orgName = "automationwithpiyush" + (int)(Math.random()*999);
+		String orgName = "qsp" + System.currentTimeMillis() / 1000;
 		WebElement orgField = driver.findElement(By.name("accountname"));
 
 		orgField.sendKeys(orgName);

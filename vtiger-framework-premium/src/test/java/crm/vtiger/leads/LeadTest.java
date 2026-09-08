@@ -1,6 +1,5 @@
 package crm.vtiger.leads;
 
-import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -10,10 +9,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
-public class CreateLeadTest {
-	public static void main(String[] args) throws InterruptedException, IOException {
+public class LeadTest {
 
+	@Test
+	public void createLeadTest() throws InterruptedException{
 //		open browser
 		WebDriver driver = null;
 

@@ -1,8 +1,10 @@
-package crm.vtiger.opp;
+package crm.vtiger.organization;
 
 import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.poi.EncryptedDocumentException;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,14 +12,27 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
-public class CreateOppTest {
-	public static void main(String[] args) throws InterruptedException, IOException {
+import generic_utility.FileUtility;
+import generic_utility.JavaUtility;
+import junit.framework.Assert;
+
+public class OrgTest {
+
+	@Test
+	public void createOrgTest() throws InterruptedException, EncryptedDocumentException, IOException, ParseException {
+//		get the data json	
+		String browser = FileUtility.getDataFromJSONFile("bro");
+		String url = FileUtility.getDataFromJSONFile("url");
+		String username = FileUtility.getDataFromJSONFile("un");
+		String password = FileUtility.getDataFromJSONFile("pwd");
+
+//		get data from excel
+		String orgName = FileUtility.getDataFromEXCELFile("org", 6, 0) + JavaUtility.generateRandomNumber();
 
 //		open browser
 		WebDriver driver = null;
-
-		String browser = "chrome";
 
 		if (browser.equals("chrome")) {
 			driver = new ChromeDriver();
@@ -33,13 +48,13 @@ public class CreateOppTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
 //		login	
-		driver.get("http://localhost:8888");
+		driver.get(url);
 
 		WebElement un = driver.findElement(By.name("user_name"));
-		un.sendKeys("admin");
+		un.sendKeys(username);
 
 		WebElement pwd = driver.findElement(By.name("user_password"));
-		pwd.sendKeys("password");
+		pwd.sendKeys(password);
 
 		WebElement loginButton = driver.findElement(By.id("submitButton"));
 		loginButton.click();
@@ -49,7 +64,8 @@ public class CreateOppTest {
 		driver.findElement(By.cssSelector("img[title='Create Organization...']")).click();
 
 //		fill the form
-		String orgName = "qsp" + System.currentTimeMillis() / 1000;
+//		String orgName = "automationwithpiyush" + System.currentTimeMillis();
+//		String orgName = "automationwithpiyush" + (int)(Math.random()*999);
 		WebElement orgField = driver.findElement(By.name("accountname"));
 
 		orgField.sendKeys(orgName);
@@ -60,13 +76,15 @@ public class CreateOppTest {
 //		verification
 		String actOrgName = driver.findElement(By.id("dtlview_Organization Name")).getText();
 
-		if (actOrgName.equals(orgName)) {
-			System.out.println("org created successfullyyyy !!!");
-		} else {
-			System.out.println("Could not create organization");
-		}
+//		if (actOrgName.equals(orgName)) {
+//			System.out.println("org created successfullyyyy !!!");
+//		} else {
+//			System.out.println("Could not create organization");
+//		}
 
-//		logout
+		Assert.assertEquals(orgName, actOrgName);
+
+//			logout
 		WebElement profile = driver.findElement(By.cssSelector("img[src='themes/softed/images/user.PNG']"));
 
 //		hover on profile icon

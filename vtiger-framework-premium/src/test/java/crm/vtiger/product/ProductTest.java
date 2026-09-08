@@ -1,8 +1,12 @@
-package crm.vtiger.document;
+package crm.vtiger.product;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,14 +14,25 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
-public class CreateDocTest {
-	public static void main(String[] args) throws InterruptedException, IOException {
+public class ProductTest {
+
+	@Test
+	public void createProductTest() throws IOException, ParseException, InterruptedException {
+		FileReader fr = new FileReader("./src/test/resources/commondata.json");
+
+		JSONParser parser = new JSONParser();
+		Object obj = parser.parse(fr);
+
+		JSONObject jObj = (JSONObject) obj;
+		String browser = jObj.get("bro").toString();
+		String url = jObj.get("url").toString();
+		String username = jObj.get("un").toString();
+		String password = jObj.get("pwd").toString();
 
 //		open browser
 		WebDriver driver = null;
-
-		String browser = "chrome";
 
 		if (browser.equals("chrome")) {
 			driver = new ChromeDriver();
@@ -33,13 +48,13 @@ public class CreateDocTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
 //		login	
-		driver.get("http://localhost:8888");
+		driver.get(url);
 
 		WebElement un = driver.findElement(By.name("user_name"));
-		un.sendKeys("admin");
+		un.sendKeys(username);
 
 		WebElement pwd = driver.findElement(By.name("user_password"));
-		pwd.sendKeys("password");
+		pwd.sendKeys(password);
 
 		WebElement loginButton = driver.findElement(By.id("submitButton"));
 		loginButton.click();

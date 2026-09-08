@@ -15,7 +15,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import generic_utility.FileUtility;
 import generic_utility.WebDriverUtility;
@@ -194,15 +193,9 @@ public class ContactTest {
 //
 //			Reporter.log("Could not create contact", true);
 //		}
+		boolean status = actOrgName.contains(orgName) && actLastName.contains(lastName);
 
-//		Assert.assertEquals(actLastName, lastName);
-//		boolean status = actOrgName.contains(orgName);
-//		Assert.assertTrue(status);
-
-		SoftAssert sa = new SoftAssert();
-		sa.assertEquals(actLastName, lastName);
-		boolean status = actOrgName.contains(orgName);
-		sa.assertTrue(status);
+		Assert.assertTrue(status);
 
 		// logout
 		Reporter.log("Preparing to logout...", true);
@@ -224,6 +217,5 @@ public class ContactTest {
 		driver.quit();
 
 		Reporter.log("========== CREATE CONTACT TEST COMPLETED ==========", true);
-		sa.assertAll();
 	}
 }
