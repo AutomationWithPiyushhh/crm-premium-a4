@@ -1,0 +1,13 @@
+<suite name = "suite">
+	<test  name = "testRunner1">
+		<parameter name="un" value = "admin" />
+		<parameter name="pwd" value = "manager" />
+		<classes>
+			<class name="types_of_executions.ContactTest" >
+				<methods>
+					<include name = "createContact" />				
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

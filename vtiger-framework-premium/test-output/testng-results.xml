@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-08T12:39:38 IST" name="Suite" finished-at="2026-09-08T12:39:44 IST" duration-ms="6638">
+  <suite started-at="2026-09-09T12:39:42 IST" name="Suite" finished-at="2026-09-09T12:39:42 IST" duration-ms="82">
     <groups>
+      <group name="s">
+        <method signature="ContactTest.deleteContact()[pri:0, instance:types_of_executions.ContactTest@45752059]" name="deleteContact" class="types_of_executions.ContactTest"/>
+        <method signature="ContactTest.modifyContact()[pri:0, instance:types_of_executions.ContactTest@45752059]" name="modifyContact" class="types_of_executions.ContactTest"/>
+      </group> <!-- s -->
     </groups>
-    <test started-at="2026-09-08T12:39:38 IST" name="TestRunner2" finished-at="2026-09-08T12:39:44 IST" duration-ms="6469">
-      <class name="types_of_executions.LeadTest">
-        <test-method signature="createLead()[pri:0, instance:types_of_executions.LeadTest@7bedc48a]" started-at="2026-09-08T12:39:38 IST" name="createLead" finished-at="2026-09-08T12:39:44 IST" duration-ms="6406" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createLead -->
-      </class> <!-- types_of_executions.LeadTest -->
-    </test> <!-- TestRunner2 -->
-    <test started-at="2026-09-08T12:39:38 IST" name="TestRunner1" finished-at="2026-09-08T12:39:44 IST" duration-ms="6591">
+    <test started-at="2026-09-09T12:39:42 IST" name="Test" finished-at="2026-09-09T12:39:42 IST" duration-ms="82">
       <class name="types_of_executions.ContactTest">
-        <test-method signature="createContact()[pri:0, instance:types_of_executions.ContactTest@c730b35]" started-at="2026-09-08T12:39:38 IST" name="createContact" finished-at="2026-09-08T12:39:44 IST" duration-ms="6530" status="PASS">
+        <test-method signature="deleteContact()[pri:0, instance:types_of_executions.ContactTest@45752059]" started-at="2026-09-09T12:39:42 IST" name="deleteContact" finished-at="2026-09-09T12:39:42 IST" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createContact -->
+        </test-method> <!-- deleteContact -->
+        <test-method signature="modifyContact()[pri:0, instance:types_of_executions.ContactTest@45752059]" started-at="2026-09-09T12:39:42 IST" name="modifyContact" finished-at="2026-09-09T12:39:42 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modifyContact -->
       </class> <!-- types_of_executions.ContactTest -->
-    </test> <!-- TestRunner1 -->
-    <test started-at="2026-09-08T12:39:38 IST" name="TestRunner3" finished-at="2026-09-08T12:39:44 IST" duration-ms="6638">
-      <class name="types_of_executions.OrgTest">
-        <test-method signature="createOrg()[pri:0, instance:types_of_executions.OrgTest@2df3b89c]" started-at="2026-09-08T12:39:38 IST" name="createOrg" finished-at="2026-09-08T12:39:44 IST" duration-ms="6577" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createOrg -->
-      </class> <!-- types_of_executions.OrgTest -->
-    </test> <!-- TestRunner3 -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

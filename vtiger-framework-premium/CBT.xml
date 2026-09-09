@@ -1,0 +1,15 @@
+<suite parallel = "tests" name = "suite">
+	<test  name = "testRunner1">
+		<parameter name="bro" value = "edge" />
+		<classes>
+			<class name="types_of_executions.OrgTest" />
+		</classes>
+	</test>
+	
+	<test  name = "testRunner2">
+		<parameter name="bro" value = "chrome" />
+		<classes>
+			<class name="types_of_executions.LeadTest" />
+		</classes>
+	</test>
+</suite>

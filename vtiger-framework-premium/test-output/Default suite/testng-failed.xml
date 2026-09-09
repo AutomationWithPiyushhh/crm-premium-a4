@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="helper_attributes.SkipIgnoredTest">
+      <class name="types_of_executions.ContactTest">
         <methods>
-          <include name="modifyOrgTest"/>
-          <include name="createOrgTest"/>
+          <include name="createContact"/>
         </methods>
-      </class> <!-- helper_attributes.SkipIgnoredTest -->
+      </class> <!-- types_of_executions.ContactTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

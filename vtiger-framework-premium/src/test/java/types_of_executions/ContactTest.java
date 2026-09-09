@@ -1,15 +1,21 @@
 package types_of_executions;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class ContactTest {
-	@Test
+
+	@Test(groups = "r")
 	public void createContact() throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
-		Thread.sleep(3000);
-		driver.quit();
+		System.out.println("regression");
 	}
 
+	@Test(groups = "s")
+	public void modifyContact() throws InterruptedException {
+		System.out.println("smoke");
+	}
+
+	@Test(groups = "s")
+	public void deleteContact() throws InterruptedException {
+		System.out.println("smoke");
+	}
 }

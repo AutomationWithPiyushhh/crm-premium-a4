@@ -5,12 +5,6 @@
 
 
 <suite parallel="tests" name="Suite">
-	<test name="TestRunner1">
-		<classes>
-			<class name="types_of_executions.ContactTest" />
-		</classes>
-	</test>
-	
 	<test name="TestRunner2">
 		<classes>
 			<class name="types_of_executions.LeadTest" />
@@ -23,3 +17,6 @@
 		</classes>
 	</test>
 </suite>
+
+
+
