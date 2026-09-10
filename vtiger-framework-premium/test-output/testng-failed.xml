@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="types_of_executions.ContactTest">
+      <class name="crm.vtiger.organization.OrgTest">
         <methods>
-          <include name="createContact"/>
+          <include name="logout"/>
+          <include name="openBro"/>
+          <include name="createOrgTest"/>
+          <include name="closeBro"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- types_of_executions.ContactTest -->
+      </class> <!-- crm.vtiger.organization.OrgTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

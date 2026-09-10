@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-09T12:39:42 IST" name="Suite" finished-at="2026-09-09T12:39:42 IST" duration-ms="82">
+  <suite started-at="2026-09-10T12:49:58 IST" name="Default suite" finished-at="2026-09-10T12:50:15 IST" duration-ms="17515">
     <groups>
-      <group name="s">
-        <method signature="ContactTest.deleteContact()[pri:0, instance:types_of_executions.ContactTest@45752059]" name="deleteContact" class="types_of_executions.ContactTest"/>
-        <method signature="ContactTest.modifyContact()[pri:0, instance:types_of_executions.ContactTest@45752059]" name="modifyContact" class="types_of_executions.ContactTest"/>
-      </group> <!-- s -->
     </groups>
-    <test started-at="2026-09-09T12:39:42 IST" name="Test" finished-at="2026-09-09T12:39:42 IST" duration-ms="82">
-      <class name="types_of_executions.ContactTest">
-        <test-method signature="deleteContact()[pri:0, instance:types_of_executions.ContactTest@45752059]" started-at="2026-09-09T12:39:42 IST" name="deleteContact" finished-at="2026-09-09T12:39:42 IST" duration-ms="18" status="PASS">
+    <test started-at="2026-09-10T12:49:58 IST" name="Default test" finished-at="2026-09-10T12:50:15 IST" duration-ms="17515">
+      <class name="crm.vtiger.organization.OrgTest">
+        <test-method is-config="true" signature="openBro()[pri:0, instance:crm.vtiger.organization.OrgTest@24aed80c]" started-at="2026-09-10T12:49:58 IST" name="openBro" finished-at="2026-09-10T12:49:59 IST" duration-ms="1419" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteContact -->
-        <test-method signature="modifyContact()[pri:0, instance:types_of_executions.ContactTest@45752059]" started-at="2026-09-09T12:39:42 IST" name="modifyContact" finished-at="2026-09-09T12:39:42 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- openBro -->
+        <test-method is-config="true" signature="login()[pri:0, instance:crm.vtiger.organization.OrgTest@24aed80c]" started-at="2026-09-10T12:49:59 IST" name="login" finished-at="2026-09-10T12:50:05 IST" duration-ms="5734" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- modifyContact -->
-      </class> <!-- types_of_executions.ContactTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- login -->
+        <test-method signature="createOrgTest()[pri:0, instance:crm.vtiger.organization.OrgTest@24aed80c]" started-at="2026-09-10T12:50:05 IST" name="createOrgTest" finished-at="2026-09-10T12:50:11 IST" duration-ms="6241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrgTest -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:crm.vtiger.organization.OrgTest@24aed80c]" started-at="2026-09-10T12:50:11 IST" name="logout" finished-at="2026-09-10T12:50:12 IST" duration-ms="797" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBro()[pri:0, instance:crm.vtiger.organization.OrgTest@24aed80c]" started-at="2026-09-10T12:50:12 IST" name="closeBro" finished-at="2026-09-10T12:50:15 IST" duration-ms="3278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBro -->
+      </class> <!-- crm.vtiger.organization.OrgTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
