@@ -28,6 +28,7 @@ public class BaseClass {
 //		open browser
 
 		String browser = FileUtility.getDataFromJSONFile("bro");
+
 		if (browser.equals("chrome")) {
 			driver = new ChromeDriver();
 		} else if (browser.equals("edge")) {
